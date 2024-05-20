@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences sharedPreferences = getSharedPreferences("myPreferences", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                // Сохранение строкового значения
                 editor.putString("Phone", binding.editNumber.getText().toString());
                 editor.putString("Surname", binding.editSurname.getText().toString());
                 editor.putString("Name", binding.editName.getText().toString());
