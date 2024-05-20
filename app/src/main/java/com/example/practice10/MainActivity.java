@@ -43,8 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 adapter.notifyItemInserted(contacts.size() - 1);
                 Toast.makeText(this, "Contact saved successfully!", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Failed to save contact",
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Failed to save contact", Toast.LENGTH_SHORT).show();
             }
         });
         //удаляем контакт
@@ -91,11 +90,11 @@ public class MainActivity extends AppCompatActivity {
 //обновляем данные
         Button updateButton = findViewById(R.id.update_button);
         updateButton.setOnClickListener(v -> {
-            String oldPhone = phoneInput.getText().toString(); //Считаем что это старый номер для поиска
-            String newName = nameInput.getText().toString(); //Новое имя для обновления
-            String newPhone = phoneInput.getText().toString(); //Новый номер для обновления
-            String newSurname = surnameInput.getText().toString(); //Новый номер для обновления
-            String newPassword = passwordInput.getText().toString(); //Новый номер для обновления
+            String oldPhone = phoneInput.getText().toString();
+            String newName = nameInput.getText().toString();
+            String newPhone = phoneInput.getText().toString();
+            String newSurname = surnameInput.getText().toString();
+            String newPassword = passwordInput.getText().toString();
             if (dbHelper.updateContact(oldPhone, newName, newPhone, newSurname, newPassword)) {
                 Toast.makeText(this, "Contact updated successfully!", Toast.LENGTH_SHORT).show();
                 // Обновляем список и адаптер
